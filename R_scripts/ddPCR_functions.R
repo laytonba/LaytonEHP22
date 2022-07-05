@@ -71,5 +71,3 @@ upperConfInf <- function(x) {
     }
   }
 }
-
-
