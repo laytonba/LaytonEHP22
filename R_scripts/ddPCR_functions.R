@@ -1,17 +1,17 @@
-# custom functions for use in ddPCR data analysis
+# custom functions for use in covid ddPCR data analysis
 # author: B. Layton unless otherwise noted
 
 
 
 # a handy function for pretty figures and legends
-unlog <- function(x) {round(10^x, digits = 0)}
+unlog = function(x) {round(10^x, digits = 0)}
 
 # function for calculating standard error
-se <- function(x) sd(x, na.rm = T)/sqrt(length(x))
+se = function(x) sd(x, na.rm = T)/sqrt(length(x))
 
 #### Custom aggregation functions ####
 # function for aggregating qualitative results - for use with dcast on QualCall variable only:
-partialQualAggr <- function(x) { 
+partialQualAggr = function(x) { 
   if (all(is.na(x))) {
     return("NA") # if all are NAs - meaning all reps failed QC due to low droplets or all targets 0 - return NA
   } else if (all(str_detect(x, "Negative"), na.rm = TRUE)) {
@@ -24,7 +24,7 @@ partialQualAggr <- function(x) {
 }
 
 # function for aggregating QCreason - for use with dcast on QCreason variable only:
-aggrQCreason <- function(x) { 
+aggrQCreason = function(x) { 
   x <- str_replace_na(as.character(x))
   if (all(str_detect(x, "NA"))) {
     return("NA") # if all reps are NA, return NA
@@ -35,7 +35,7 @@ aggrQCreason <- function(x) {
 }
 
 # function for pulling out the lower 95% confidence interval from t.test 
-lowerConfInf <- function(x) {
+lowerConfInf = function(x) {
   if (all(is.na(x))) return(NA) # needed to avoid breaking the t.test function
   else {
     nx <- length(x)
@@ -54,7 +54,7 @@ lowerConfInf <- function(x) {
 }
 
 # function for pulling out the upper 95% confidence interval from t.test 
-upperConfInf <- function(x) {
+upperConfInf = function(x) {
   if (all(is.na(x))) return(NA) # needed to avoid breaking the t.test function
   else {
     nx <- length(x)
