@@ -7,7 +7,7 @@
 unlog = function(x) {round(10^x, digits = 0)}
 
 # function for calculating standard error
-se = function(x) sd(x, na.rm = T)/sqrt(length(x))
+se = function(x) {sd(x, na.rm = T)/sqrt(length(x))}
 
 #### Custom aggregation functions ####
 # function for aggregating qualitative results - for use with dcast on QualCall variable only:
