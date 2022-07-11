@@ -15,9 +15,7 @@
 
 #### set up: import packages, functions, and data ####
 
-library(ggplot2); library(reshape2); library(grid); 
-library(chron); library(stringr); library(plyr); 
-library(schoolmath); library(openxlsx); #library(lubridate)
+library(reshape2); library(chron); library(stringr); library(plyr)
 
 theme_set(theme_bw()) # I prefer the bw background for graphics
 Sys.setenv(TZ = 'GMT') # becomes important for time series plots
@@ -376,8 +374,8 @@ blanks.agg
 
 # #### clean up workspace ####
 rm("bad", 'ebMax', 'ebs', 'ef', "fbMax", 'fbs', 'matchfail', 'mismatch',
-   "s", "splitCol","w", "badData", 'd', 'ebPCRplate', 'fbPCRplate',
-    'goodPlate', 'i', 'j','m',"M", "QualColumn", "ShiedlVol", "uLRxn")
+   "s", "splitCol","w", 'd', 'ebPCRplate', 'fbPCRplate',
+   'i', 'j','m',"M", "ShieldVol", "uLRxn")
 
 #### Export results ####
 
