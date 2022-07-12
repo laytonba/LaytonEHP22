@@ -2,4 +2,6 @@
 R code and ddPCR data used in Layton et al., Environmental Health Perspectives (2022).  https://ehp.niehs.nih.gov/doi/10.1289/EHP10289
 
 
-Hello! This repository is currently under construction. I am in the process of compiling and editing the required files (fixing dependencies, etc). Please check back soon, or contact me at LaytonB@CleanWaterServices.org if you urgently need access to our data. Thank you for your patience!
+Download and run the script ddPCR_dataPrep_EHP.R to popluate your Rstudio workspace with the ddPCR data that were used in this publication, including our QC flags and aggregated summary tables. 
+
+I also have code for creating the micro-sewershed map figures in R, but need to confirm with all parties that those shape files are OK to share publicly in order for that code to run and re-create our figures. Please contact me at LaytonB@CleanWaterServices.org if you have any questions. Thank you!
